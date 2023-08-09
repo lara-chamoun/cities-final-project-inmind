@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { SignuppageComponent } from './signuppage/signuppage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginpageComponent
+    LoginpageComponent,
+    SignuppageComponent
   ],
   imports: [
     BrowserModule,
