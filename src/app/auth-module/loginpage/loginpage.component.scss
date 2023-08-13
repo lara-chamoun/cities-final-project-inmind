@@ -1,3 +1,4 @@
+
 .container{
     width: 100vw;
     height: 100vh;
@@ -16,9 +17,10 @@
     margin-left: 50%;
   }
   
-  .logo-img {
+  .logo-img img {
     position: absolute; /* Position the logo absolutely within the .bg-img container */
-   
+    width: 9vw;
+    height: 5vh;
     padding: 3% 
   }
   .form-container{
@@ -51,15 +53,15 @@
 
     padding-top: 20%;
   }
+  
   .login-input {
     
-    width: 126%;
-    padding: 4%;
-    margin-bottom: 10px;
+    width: 164%;
+    padding: 5%;
     border-radius: 12px;
     background-color: #f4f4f4;
     border-style: none;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
   }
   .login-button {
     background-color: #3d8d7b;
@@ -67,13 +69,15 @@
     border: none;
     padding-left: 14%;
     padding-right: 14%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     border-radius: 30px;
     cursor: pointer;
     margin-top: 8%;
     width: 60%;
-    margin-left: 72%;
+    margin-left: 113%;
+    font-weight: bold;
+    font-size: 16px;
     
   }
   .login-button:hover {

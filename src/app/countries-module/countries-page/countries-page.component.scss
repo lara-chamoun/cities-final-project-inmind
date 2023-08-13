@@ -1,0 +1,108 @@
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4f4f4;
+
+}
+.bg-img {
+    /* The image used */
+    background-image: url("/assets/img/countries-list.jpg");
+    height: 36vh; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+  }
+  .nav-bar {
+ 
+    background-color: rgba(0, 0, 0, 0.4); /* Black color with some opacity */
+    height: 36vh;;
+    pointer-events: none; /* Allow clicks to pass through the overlay */
+    
+  
+}
+.objects{
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically center align items */
+   
+}
+
+
+  .logo-img {   
+    padding: 3% 
+  }
+
+p{
+    color: #f4f4f4;
+    font-size: 24px;
+    padding-left: 74%;
+}
+.white-icon{
+    padding-left: 2%;
+    color: #f4f4f4;;
+}
+
+.search-input {
+    
+  width: 30%;
+  padding: 1%;
+  border-radius: 12px;
+  background-color: white;
+  border-style: none;
+  margin-top: 9.6%;
+  margin-left: 35%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+
+}
+
+
+.countries-list{
+  display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between; /* Adjust as needed */
+ margin-top: 3%;
+ margin-left: 20%;
+ margin-right: 20%;
+
+}
+
+.countries-block{
+ background-color:white;
+ width: 30%;
+ height: 5%;
+ border-radius: 10px;
+ display: flex;
+ margin-top: 5%;
+
+ //float: left;
+ 
+}
+
+
+ 
+ 
+
+
+
+.flag img {
+  width: 80px;
+  height: 80px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 26px;
+  padding:20%;
+}
+
+.text {
+    padding-left: 12%;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left vertically */
+}
+.country{
+  padding-bottom: 14%;
+  font-weight: bold;
+}
