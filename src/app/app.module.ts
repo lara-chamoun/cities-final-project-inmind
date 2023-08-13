@@ -5,9 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+<<<<<<< HEAD
 import { SignuppageComponent } from './auth-module/signuppage/signuppage.component';
 import { LoginpageComponent } from './auth-module/loginpage/loginpage.component';
 import { CountriesPageComponent } from './countries-module/countries-page/countries-page.component';
+=======
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { SignuppageComponent } from './signuppage/signuppage.component';
+import { CountriespageComponent } from './countriespage/countriespage.component';
+>>>>>>> 96071f7f61093b9473df1f8f4ffd00375f294270
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {NgIf} from '@angular/common';
@@ -21,7 +27,11 @@ import { HttpClientModule } from  '@angular/common/http';
     AppComponent,
     LoginpageComponent,
     SignuppageComponent,
+<<<<<<< HEAD
     CountriesPageComponent
+=======
+    CountriespageComponent
+>>>>>>> 96071f7f61093b9473df1f8f4ffd00375f294270
   ],
   imports: [
     BrowserModule,
