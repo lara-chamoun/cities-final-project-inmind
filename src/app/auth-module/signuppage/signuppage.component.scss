@@ -16,9 +16,10 @@
     margin-left: 50%;
   }
   
-  .logo-img {
+  .logo-img img {
     position: absolute; /* Position the logo absolutely within the .bg-img container */
-   
+    width: 9vw;
+    height: 5vh;
     padding: 3% 
   }
   .form-container{
@@ -49,18 +50,35 @@
 
   .login-container {
 
-    padding-top: 20%;
+    padding-top: 15%;
   }
   .login-input {
     
     width: 126%;
-    padding: 5%;
-    margin-bottom: 10px;
+    padding: 4%;
+   
     border-radius: 12px;
     background-color: #f4f4f4;
     border-style: none;
     margin-bottom: 5%;
   }
+  .name-fields {
+    display: flex;
+    gap: 5%; /* Adjust the gap between the fields as needed */
+ 
+  }
+  .name-input{
+    
+    padding: 4%;
+    padding-right: 27%;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    border-style: none;
+    margin-bottom: 5%;
+
+  }
+
   .login-button {
     background-color: #3d8d7b;
     color: white;
@@ -72,12 +90,24 @@
     border-radius: 30px;
     cursor: pointer;
     margin-top: 8%;
-    width: 60%;
-    margin-left: 72%;
-    font-size: 20px;
+    width: 50%;
+    margin-left: 82%;
+    font-size: 16px;
     font-weight: bold;
+  
     
   }
   .login-button:hover {
     background-color: #2980b9;
+  }
+  label{
+      display: block; /* Change the display property to block */
+     
+  
+  }
+  .checkbox{
+    padding-left: 5%;
+    font-size: 12px;
+    color: #3c73cb;
+    padding-top: -2%;
   }
