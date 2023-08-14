@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CountriesPageComponent } from './countries-page/countries-page.component';
-import { DescriptionPageComponent } from './description-page/description-page.component';
+
 import { MatIconModule } from '@angular/material/icon';
+import { MaincountriesPageComponent } from './pages/maincountries-page/maincountries-page.component';
+import { CountriesRoutingModule } from './countries-routing.module';
 
 
 @NgModule({
   declarations: [
- 
-    CountriesPageComponent,
-    DescriptionPageComponent
+ MaincountriesPageComponent
+    
   ],
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    CountriesRoutingModule
   ]
 })
 export class CountriesModuleModule { }
