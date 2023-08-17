@@ -11,7 +11,7 @@
     <a href="/countries" class="breadcrumb-link">HomePage</a>-><span class="current-page">DescriptionPage</span>
 </div>
 
-<div class="title-page">Lebanon</div> 
+<div class="title-page">{{ countryData.name.common }}</div> 
 
 <div class="img-gallery">
     <div class="row1">
@@ -31,24 +31,24 @@
         <h2>Information</h2>
         <p data-bold-text="Code">Code: 0000</p>
         <p data-bold-text="Currency">Currency: lebanese lira</p>
-        <p data-bold-text="Language">Language: Arabic</p>
-        <p data-bold-text="Capital City">CapitaL City: Beirut</p>
+        <p data-bold-text="Language">{{ countryData?.lang }}</p>
+        <p data-bold-text="Capital City">{{ countryData?.capital }}</p>
         <p data-bold-text=" Calling Code">Calling Code: +961</p>
-        <p data-bold-text="Region">Region: Asia</p>
+        <p data-bold-text="Region">{{ countryData?.region }}</p>
     </div>
-    <div class="flag"></div>
+    <div class="flag" [style.background-image]="'url(' + countryData?.flags.png + ')'"></div>
 </div>
 
 <div class="border-countries">
     <h1 class="border-title">Border Countries</h1>
     <div class="countries-list">
-        <div class="countries-block" >
-        <div class="flag2"><img src="/assets/img/Flag_of_Lebanon.png"> </div>
-        <div class="text2">
-            <div class="country2">Lebanon</div>
-            <div class="region">Asia</div>  
-        </div>
-        </div>
+        <div class="countries-block">
+            <div class="flag2"><img src="/assets/img/Flag_of_Lebanon.png"> </div>
+            <div class="text2">
+              <div class="country2">Lebanon</div>
+              <div class="region">Asia</div>  
+            </div>
+          </div>
         <div class="countries-block">
           <div class="flag2"><img src="/assets/img/Flag_of_Lebanon.png"> </div>
           <div class="text2">

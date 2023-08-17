@@ -6,6 +6,8 @@ import { MaincountriesPageComponent } from './pages/maincountries-page/maincount
 import { CountriesPageComponent } from './components/countries-page/countries-page.component';
 import { DescriptionPageComponent } from './components/description-page/description-page.component';
 
+
+
 const routes: Routes = [{
   path: '', 
   component: MaincountriesPageComponent, 
@@ -15,7 +17,7 @@ const routes: Routes = [{
           component: CountriesPageComponent, 
       },
       { 
-        path: 'description', 
+        path: 'description/:countryName', 
         component: DescriptionPageComponent, 
     }
 
