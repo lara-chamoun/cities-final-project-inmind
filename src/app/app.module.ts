@@ -15,7 +15,7 @@ import { HttpClientModule } from  '@angular/common/http';
 
 
 import { AuthModuleModule } from './auth-module/auth-module.module';
-import { DescriptionPageAdminComponent } from './countries-module/components/description-page-admin/description-page-admin.component';
+
 import { FormsModule } from '@angular/forms';
 
 
@@ -29,7 +29,7 @@ import { FormsModule } from '@angular/forms';
     SignuppageComponent,
     CountriesPageComponent,
     DescriptionPageComponent,
-    DescriptionPageAdminComponent
+  
   ],
   imports: [
     BrowserModule,
