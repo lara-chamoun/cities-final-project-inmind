@@ -1,27 +1,13 @@
-
-    <div class="form-container">
-        <h1 class="h1">Log in</h1>
-        <span class="span">Don't have an account? <a class="signup-link" [routerLink]="['/signup']">Sign up</a></span>
-        <form class ="login-container" >
-            <input class="login-input" type="email"  placeholder="Email" required>
-            <input class="login-input" type="password"  placeholder="Password" required>
-            <button class="login-button" type="submit" [routerLink]="['/home']">Log in</button>
-        </form>
-    
-    
-    
-    </div>
+<div class="form-container">
+    <h1 class="h1">Log in</h1>
+    <span class="span">Don't have an account? <a class="signup-link" [routerLink]="['/signup']">Sign up</a></span>
+    <div class="error-message" style="color: red;" *ngIf="loginError">{{ loginError }}</div>
+    <form class="login-container" (ngSubmit)="onSubmit()">
+      <input class="login-input" type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+      <input class="login-input" type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+      <button class="login-button" type="submit">Log in</button>
+      
+      
+    </form>
+  </div>
   
-
-
-
-
-
-
-
-
-
-
-
-
-
