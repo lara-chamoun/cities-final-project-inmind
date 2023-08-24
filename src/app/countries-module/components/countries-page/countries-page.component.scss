@@ -111,7 +111,7 @@ h3{
   color: #f4f4f4;
   border-style: none;
   border-radius: 20px;
-  margin-top: 6%;
+  margin-top: 20%;
 }
 
 
@@ -174,4 +174,93 @@ h3{
   padding-bottom: 14%;
   font-weight: bold;
 }
+@media (max-width: 1700px) {
+  p{
+    color: #f4f4f4;
+    font-size: 24px;
+    padding-left: 70%;
+}
+.white-icon{
+    padding-left: 4%;
+    color: #f4f4f4;;
+}
 
+}
+@media (max-width: 1500px) {
+  p{
+    color: #f4f4f4;
+    font-size: 24px;
+    padding-left: 68%;
+}
+.white-icon{
+    padding-left: 4%;
+    color: #f4f4f4;;
+}
+
+}
+@media (max-width: 1200px) {
+  p{
+    color: #f4f4f4;
+    font-size: 24px;
+    padding-left: 65%;
+}
+.white-icon{
+    padding-left: 4%;
+    color: #f4f4f4;;
+}
+.search-input {
+  width: 30%; /* Adjust the width as needed */
+  padding: 1%;
+  border-radius: 12px;
+  background-color: white;
+  border-style: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+  margin-left: 35%;
+  margin-top: 14.5%;
+}
+
+}
+@media (max-width: 1000px) {
+  p{
+    color: #f4f4f4;
+    font-size: 20px;
+    padding-left: 60%;
+}
+.white-icon{
+    padding-left: 4%;
+    color: #f4f4f4;;
+}
+.search-input {
+  width: 30%; /* Adjust the width as needed */
+  padding: 1%;
+  border-radius: 12px;
+  background-color: white;
+  border-style: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+  margin-left: 35%;
+  margin-top: 19%;
+}
+
+}
+@media (max-width: 800px) {
+  p{
+    color: #f4f4f4;
+    font-size: 20px;
+    padding-left: 55%;
+}
+.white-icon{
+    padding-left: 4%;
+    color: #f4f4f4;;
+}
+.search-input {
+  width: 30%; /* Adjust the width as needed */
+  padding: 1%;
+  border-radius: 12px;
+  background-color: white;
+  border-style: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+  margin-left: 35%;
+  margin-top: 18%;
+}
+
+}

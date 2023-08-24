@@ -22,3 +22,27 @@
     height: 5vh;
     padding: 3% 
   }
+
+  @media (max-width: 390px) {
+  
+    .bg-img {
+      /* The image used */
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(244, 244, 244, 0.1)),
+        url("/assets/img/login-background.jpg");
+    
+     
+      height: 100vh; 
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+      background-position: right;
+     
+    }
+    
+    .logo-img img {
+      position: absolute; /* Position the logo absolutely within the .bg-img container */
+      width: 15vw;
+      height: 3vh;
+      padding: 3% 
+    }
+  }

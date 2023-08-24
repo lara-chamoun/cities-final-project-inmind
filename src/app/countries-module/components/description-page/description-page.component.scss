@@ -77,13 +77,13 @@
 }
 
 .col11{
-    background-image: url("/assets/img/sunset.jpg");
     background-size: cover; /* Image will cover the entire div */
     background-position: center; /* Center the image within the div */
     height: 100%;
     width: 100%;
     margin-right: 2%;
     border-top-left-radius: 14px;
+    background-color: gray;
 
 }
 .col21{
@@ -123,6 +123,8 @@
     width: 100%;
     margin-right: 2%;
     
+   
+    
 }
 .col3{
     background-image: url("/assets/img/rauche.jpg");
@@ -131,6 +133,9 @@
     height: 100%;
     width: 100%;
     border-bottom-right-radius: 14px;
+    border-color: #3C73CB;
+    border-width: 2px;
+    
     
 }
 .details{
@@ -140,6 +145,7 @@
     display: flex;
     flex-direction: row; /* Arrange items horizontally */
     margin-left: 15%;
+    margin-bottom: 5%;
   
 
 }
@@ -148,11 +154,25 @@
     height: 90%;
     background-color: #EAEDF2;
     text-align: left;
-  
- 
     padding: 20px;
+    position: relative;
+
+   
 
 }
+.info-row {
+    display: flex;
+    flex-direction: row; /* Display items in a row */
+    align-items: center; /* Center items vertically within the row */
+    margin-bottom: 6px; /* Add spacing between rows */
+  }
+
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%; /* Add spacing between items */
+  }
 .flag{
     
     background-size: cover; /* Image will cover the entire div */
@@ -165,14 +185,17 @@
     margin-top: 8%;
 }
 h2{
+    margin-left: 40%;
     text-align: center;
     color: #3C73CB;
-    margin-bottom: 4%;
+    margin-bottom: 5%;
+   
 } p{
     margin: 0;
-    margin-bottom: 6%;
+    //margin-bottom: 8%;
     font-size: 18px;
     margin-left: 3%;
+    width: 100%;
 }
 .info p::before {
     font-weight: bold;
@@ -235,4 +258,181 @@ h2{
   .country2{
     padding-bottom: 14%;
     font-weight: bold;
+  }
+  .transparent-input {
+    background-color: transparent;
+    border: none;
+    outline: none; /* Remove outline when focused */
+    width: 400px;
+    font-size: 16px;
+
+
+  }
+  .heading{
+    display: flex;
+    flex-direction: row;
+  }
+  .edit-icon{
+    margin-left: 36%;
+  }
+  .filled-input{
+
+    border-color: #3C73CB;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 1.5%;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+  }
+  .save{
+    background-color: #3C73CB;
+    color:white;
+    padding: 2%;
+    margin-left: 66%;
+   
+    border-radius: 5px;
+    width: 200px;
+    border-style: none;
+  }
+  .save:hover{
+   background-color: #3d8d7b;
+  }
+
+  .plus-icon{
+    font-size: 200px;
+    color: #EAEDF2;
+    height: 200px;
+    width: 200px;
+    margin-left: 25%;
+  }
+
+  .countries-list{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between; /* Adjust as needed */
+   margin-top: 3%;
+   margin-left: 15%;
+   margin-right: 10%;
+  
+  }
+  
+  .countries-block{
+   background-color:white;
+   width: 30%;
+   height: 5%;
+   border-radius: 10px;
+   display: flex;
+   margin-top: 5%;
+  
+   //float: left;
+   
+  }
+  
+  .countries-block:hover {
+  
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Adjust the shadow properties */
+  }
+  .flag11 img {
+    width: 80px;
+    height: 80px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 26px;
+    padding:20%;
+  }
+  
+  .text11 {
+      padding-left: 12%;
+      padding-top: 5%;
+      padding-bottom: 4%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align content to the left vertically */
+  }
+  .country11{
+    padding-bottom: 14%;
+    font-weight: bold;
+  }
+  
+
+  @media (max-width: 1200px) {
+
+    .flag{
+    
+      background-size: cover; /* Image will cover the entire div */
+      background-position: center; /* Center the image within the div */
+      background-repeat: no-repeat;
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      margin-left: 4%;
+      margin-top: 8%;
+  }
+  .user{
+    color: #f4f4f4;
+    font-size: 16px;
+    padding-left: 70%;
+    padding-top: 2%;
+
+
+}
+.filled-input{
+
+  border-color: #3C73CB;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 1.5%;
+  right: 0;
+  margin-right: 5%;
+
+}
+p{
+  padding-bottom: 15%;
+  font-size: 18px;
+  margin-left: 3%;
+  width: 100%;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0%; /* Add spacing between items */
+}
+.save{
+  background-color: #3C73CB;
+  color:white;
+  padding: 2%;
+  margin-left: 52%;
+ 
+  border-radius: 5px;
+  width: 200px;
+  border-style: none;
+}
+.info{
+  width: 50%;
+  height: 110%;
+  background-color: #EAEDF2;
+  text-align: left;
+  padding: 20px;
+  position: relative;
+
+ 
+
+}
+.border-countries{
+  height: 20%;
+  width: 100%;
+  margin-top: 9%;
+ 
+}
+.plus-icon{
+font-size: 200px;
+color: #EAEDF2;
+height: 200px;
+width: 200px;
+margin-left: 12%;
+}
+
   }

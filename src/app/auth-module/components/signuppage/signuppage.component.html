@@ -1,25 +1,35 @@
-  <div class="form-container">
-        <h1 class="h1">Create new account</h1>
-        <span class="span">Already a member? <a class="signup-link" [routerLink]="[' ']">Log in</a></span>
-        <form class ="login-container">
-            <div class="name-fields">
-                <input class=" name-input" type="text" placeholder="First Name" required>
-                <input class=" name-input" type="text" placeholder="Last Name" required>
-              </div>
-            <input class="login-input" type="email" placeholder="Email" required>
-            <input class="login-input" type="password" placeholder="Password" required>
-            <label>
-                <input  type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Create Admin account
-              </label>
-            <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> I agree to the terms and conditions as out by the user agreement.  
-            </label>  
-            <label class="checkbox" >By clicking here, I state that I have read and understood the terms and conditions.</label>
-            <button class="login-button" type="submit">Sign up</button>
+<div class="form-container">
+  <h1 class="h1">Create new account</h1>
+  <span class="span">Already a member? <a class="signup-link" [routerLink]="['']">Log in</a></span>
+  <div  class="error-message" *ngIf="isSubmitted && signUpForm.invalid" style="color: red;">
+    All fields are required.
+  </div>
+  <div class="error-message" *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.dirty" style="color: red;">
+    Email format is wrong.
+  </div>
+  <div class="error-message" *ngIf="isSubmitted && signUpForm.invalid && !signUpForm.get('termsAndConditions')?.value" style="color: red;">
+    You must agree to the terms and conditions.
+  </div>
+  
+  
+  <form class="login-container" [formGroup]="signUpForm" (ngSubmit)="onSignUpSubmit()">
 
-        </form>
-
-    
-    
-    
+    <div class="name-fields">
+      <input class="name-input" type="text" placeholder="First Name" formControlName="firstName" required>
+      <input class="name-input" type="text" placeholder="Last Name" formControlName="lastName" required>
     </div>
+    <input class="login-input" type="email" placeholder="Email" formControlName="email" required>
+    <input class="login-input" type="password" placeholder="Password" formControlName="password" required>
+    <label>
+      <input type="checkbox" formControlName="admin"> Create Admin account
+    </label>
+    <label>
+      <input type="checkbox"formControlName="termsAndConditions" > I agree to the terms and conditions as outlined in the user agreement.
+    </label>
+    <label class="checkbox">By clicking here, I state that I have read and understood the terms and conditions.</label>
+
+
+
+    <button class="login-button" type="submit" >Sign up</button>
+  </form>
+</div>
