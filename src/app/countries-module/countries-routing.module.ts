@@ -6,7 +6,7 @@ import { MaincountriesPageComponent } from './pages/maincountries-page/maincount
 import { CountriesPageComponent } from './components/countries-page/countries-page.component';
 import { DescriptionPageComponent } from './components/description-page/description-page.component';
 
-
+import { AuthGuard } from '../auth-module/services/auth-guard.service';
 
 const routes: Routes = [{
   path: '', 
@@ -14,11 +14,11 @@ const routes: Routes = [{
   children: [ 
       { 
           path: '', 
-          component: CountriesPageComponent, 
+          component: CountriesPageComponent,  canActivate: [AuthGuard] 
       },
       { 
-        path: 'description/:countryName', 
-        component: DescriptionPageComponent, 
+        path: 'description/:countryId', 
+        component: DescriptionPageComponent,  canActivate: [AuthGuard] 
     }
 
   ]

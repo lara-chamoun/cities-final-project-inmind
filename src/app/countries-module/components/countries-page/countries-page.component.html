@@ -1,58 +1,58 @@
 <div class="container">
 
-    <div class="bg-img">
-    <div class="nav-bar">  
-        <div class="objects">
-            <div class="logo-img"  > <img src="/assets/img/logo_white.png" > </div>
-            <p>Hi, John</p>
-            <mat-icon class="white-icon">account_circle</mat-icon>
-        </div>
-    
-          <div class="search-container">
-            <form action="/action_page.php">
-              <input class="search-input" type="text" placeholder="Search.." name="search" [(ngModel)]="searchText" (input)="searchCountries(searchText)">
-              <i class="fa fa-search clickable-icon" (click)="handleIconClick()"></i>
+  <div class="bg-img">
+    <div class="nav-bar">
+      <div class="objects">
+        <div class="logo-img"> <img src="/assets/img/logo_white.png"> </div>
+        <p>Hi, <span #userNameElement>{{ userName }}</span></p>
+        <mat-icon class="white-icon" (click)="UserLogout()">account_circle</mat-icon>
+      </div>
 
-            </form>
-            <div class="filter-form"  *ngIf="showFilterForm">
-              <div class="content">
-                <h3>Filter by region</h3>
-                <label *ngFor="let region of regions">
-                  <input type="checkbox" [(ngModel)]="selectedRegions[region]" name="region">
-                  {{ region }}
-                </label>
-                <button class="filter-button" (click)="applyFilter()">Apply</button>
-              </div>
-            </div>
-            
-            
-            
-            <div class="filter" (click)="showFilterForm = !showFilterForm">
-              <i class="fa-solid fa-filter fa-xl" style="color: #ffffff;"></i>
-            </div>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input class="search-input" type="text" placeholder="Search.." name="search" [(ngModel)]="searchText"
+            (input)="searchCountries(searchText)">
+          <i class="fa fa-search clickable-icon" (click)="handleIconClick()"></i>
 
-            
+        </form>
+        <div class="filter-form" *ngIf="showFilterForm">
+          <div class="content">
+            <h3>Filter by region</h3>
+            <label *ngFor="let region of regions">
+              <input type="checkbox" [(ngModel)]="selectedRegions[region]" name="region">
+              {{ region }}
+            </label>
+            <button class="filter-button" (click)="applyFilter()">Apply</button>
           </div>
+        </div>
 
- 
 
-   
-      
+
+        <div class="filter" (click)="showFilterForm = !showFilterForm">
+          <i class="fa-solid fa-filter fa-xl" style="color: #ffffff;"></i>
+        </div>
+
+
+      </div>
+
+
+
+
+
     </div>
 
     <div class="countries-list">
-    <!-- <div class="countries-block" [routerLink]="['/home/description,country.name.common']" > -->
-      <div class="countries-block" *ngFor="let country of countriesData"   [routerLink]="['/home/description', encodeCountryName(country.name.common)]">
-        
+    <div class="countries-block" *ngFor="let country of countriesData"
+        [routerLink]="['/home/description', encodeCountryName(country.cca3)]">
+
         <div class="flag"><img [src]="country.flags.png"></div>
         <div class="text">
           <div class="country">{{ country.name.common }}</div>
           <div class="region">{{ country.region }}</div>
-        
+
         </div>
       </div>
-      
+
     </div>
 
-      </div>
-        
+  </div>

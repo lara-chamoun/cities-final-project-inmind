@@ -5,13 +5,16 @@ import { AuthRoutingModule } from './auth-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
     AuthPageComponent
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+   
+   
   ]
 })
 export class AuthModuleModule { }

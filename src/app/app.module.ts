@@ -17,10 +17,18 @@ import { HttpClientModule } from  '@angular/common/http';
 import { AuthModuleModule } from './auth-module/auth-module.module';
 
 import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './auth-module/services/interceptor.service';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { JwtModule } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment.development';
 
 
 
-
+export function tokenGetter() {
+  return localStorage.getItem('access_token'); // Adjust this to your token storage method
+}
  
 @NgModule({
   declarations: [
@@ -39,11 +47,21 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     AuthModuleModule, // Import your AuthModule
     FormsModule,
+    ReactiveFormsModule,
+
+    JwtModule.forRoot({
+      config: {
+        tokenGetter,
+        allowedDomains: [environment.authUrl], // Whitelist your API domain
+        disallowedRoutes: [], // Routes to exclude from token sending
+      }
+    })
+    
   
  
     
   ],
-  providers: [],
+   providers: [{ provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

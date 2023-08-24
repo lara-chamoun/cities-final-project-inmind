@@ -2,7 +2,7 @@
 <div class="nav-bar">
     <div class="objects">
         <div class="logo-img" > <img src="/assets/img/logo_white.png" [routerLink]="['/countries']"> </div>
-        <p class="user">Hi, John</p>
+        <p class="user">Hi, <span #userNameElement>{{ userName }}</span></p>
         <mat-icon class="white-icon">account_circle</mat-icon>
     </div>
 </div>
@@ -11,59 +11,77 @@
     <a href="/countries" class="breadcrumb-link">HomePage</a>-><span class="current-page">DescriptionPage</span>
 </div>
 
-<div class="title-page">{{ countryData.name.common }}</div> 
+<div class="title-page">{{ countryData.name?.common }}</div> 
 
 <div class="img-gallery">
     <div class="row1">
-            <div class="col11"></div>
+      <div class="col11" [style.background-image]="'url(' + col11BackgroundImageStyle + ')'"></div>
+
             <div class="col21"></div>
     </div>
     <div class="row2">
             <div class="col1"></div>
             <div class="col2"></div>
-            <div class="col3"></div>
+            
+              
+              <div class="col3">
+                <input type="file" #fileInput hidden (change)="handleFileInput($event)">
+                <mat-icon class="plus-icon" *ngIf="isAdmin" (click)="fileInput.click()">add</mat-icon>
+             
+            </div>
+            
             
     </div>
 </div>
 
-<div class="details">
-    <div class="info">
-        <h2>Information</h2>
-        <p data-bold-text="Code">Code: 0000</p>
-        <p data-bold-text="Currency">Currency: lebanese lira</p>
-        <p data-bold-text="Language">{{ countryData?.lang }}</p>
-        <p data-bold-text="Capital City">{{ countryData?.capital }}</p>
-        <p data-bold-text=" Calling Code">Calling Code: +961</p>
-        <p data-bold-text="Region">{{ countryData?.region }}</p>
-    </div>
-    <div class="flag" [style.background-image]="'url(' + countryData?.flags.png + ')'"></div>
-</div>
+
+    <div class="details">
+        <div class="info">
+            <div class="heading">
+            <h2>Information</h2>
+            <mat-icon class="edit-icon" *ngIf="isAdmin">edit</mat-icon>
+            </div>
+            <div class="info-item">
+                <p data-bold-text="Currency"> </p>
+                    <input class="transparent-input" [ngClass]="{ 'filled-input': isAdmin }"data-bold-text="Currency" [value]="getCurrenciesString()" [readonly]="!isAdmin">
+               
+            </div>
+            
+            <div class="info-item"> 
+          <p data-bold-text="Language"></p> 
+            <input class="transparent-input"[ngClass]="{ 'filled-input': isAdmin }" data-bold-text="Language" [value]="getLanguagesString()"[readonly]="!isAdmin">
+           
+          </div>
+          <div class="info-item">
+          <p data-bold-text="Capital City"> </p>  
+            <input class="transparent-input" [ngClass]="{ 'filled-input': isAdmin }"data-bold-text="Capital City" [value]="countryData?.capital"[readonly]="!isAdmin">
+           
+          </div>
+          <div class="info-item">
+          <p data-bold-text="Region"> </p>  
+            <input class="transparent-input" [ngClass]="{ 'filled-input': isAdmin }"data-bold-text="Region" [value]="countryData?.region"[readonly]="!isAdmin">
+         
+          </div>
+          <button class="save" (click)="saveChanges()" *ngIf="isAdmin">Save Changes</button>
+        </div>  
+          <div class="flag" [style.background-image]="'url(' + countryData?.flags?.png + ')'"></div>    
+       
+      </div>
 
 <div class="border-countries">
     <h1 class="border-title">Border Countries</h1>
     <div class="countries-list">
-        <div class="countries-block">
-            <div class="flag2"><img src="/assets/img/Flag_of_Lebanon.png"> </div>
-            <div class="text2">
-              <div class="country2">Lebanon</div>
-              <div class="region">Asia</div>  
-            </div>
-          </div>
-        <div class="countries-block">
-          <div class="flag2"><img src="/assets/img/Flag_of_Lebanon.png"> </div>
-          <div class="text2">
-            <div class="country2">Lebanon</div>
-            <div class="region">Asia</div>  
+      <div class="countries-block" *ngFor="let country of countriesBorder"
+          [routerLink]="['/home/description', encodeCountryName(country.cca3)]">
+  
+          <div class="flag11"><img [src]="country.flags.png"></div>
+          <div class="text11">
+            <div class="country11">{{ country.name.common }}</div>
+            <div class="region11">{{ country.region }}</div>
+  
           </div>
         </div>
-        <div class="countries-block">
-            <div class="flag2"><img src="/assets/img/Flag_of_Lebanon.png"> </div>
-            <div class="text2">
-                <div class="country2">Lebanon</div>
-                <div class="region">Asia</div>  
-            </div>
-        </div>
-    
-    </div>
+  
+      </div>
 </div>
 </div>
